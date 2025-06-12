@@ -32,6 +32,9 @@ landslides <- read_csv(
 landslide_clean <- landslides[-140, ] |> 
   clean_names()
 
+landslide_clean$date <- as.Date(landslide_clean$date, format = "%m/%d/%Y")
+
+
 landslide_clean$date <- as.Date(landslide_clean$date)
 ```
 
