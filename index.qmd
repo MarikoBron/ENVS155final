@@ -1,0 +1,78 @@
+---
+title: "index"
+format:
+  html:
+    execute:
+      message: false 
+      warning: false 
+---
+
+```{r setup}
+#installing packages
+library(tidyverse)
+library(here)
+library(janitor)
+library(flextable)
+library(readxl)
+library(ggplot2)
+library(colorspace)
+library(dplyr) 
+library(plotly) # JS plots!
+library(DT) # JS tables!
+library(leaflet) # JS maps!
+library(leaflet.extras) # leaflet add-ons!
+
+#create object
+landslides <- read_csv(
+  here("data", "landslide.csv"))
+
+```
+
+```{r cleaning}
+landslide_clean <- landslides[-140, ] |> 
+  clean_names()
+
+landslide_clean$date <- as.Date(landslide_clean$date)
+```
+
+```{r plot}
+landslide_plot <- ggplot(landslide_clean,
+                         aes(
+                           x = date,
+                           y = elev_ft
+                         )) +
+  geom_point(
+    fill = "honeydew", 
+    shape = 23,
+    alpha = 0.6,
+    size = 2,
+    stroke = 3 
+  ) +
+  
+   theme_minimal() +
+  theme(
+    panel.grid = element_blank(),
+    panel.border = element_rect(fill = NA),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  ) +
+  
+  labs(
+    title = "Portuguese Bend Landslide Monitoring",
+    x = "Date of Data Collection",
+    y = "Elevation(ft)"
+  ) + 
+    
+    geom_jitter(
+height = 0.15, 
+width = 0,
+shape = 23,
+alpha = 0.6,
+size = 2, 
+stroke = 3) + 
+    
+  scale_color_continuous_sequential(palette = "SunsetDark") 
+    
+  ggplotly(landslide_plot)
+
+```
+

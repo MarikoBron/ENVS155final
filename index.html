@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>index</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="index_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="index_files/libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="index_files/libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="index_files/libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="index_files/libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="index_files/libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="index_files/libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="index_files/libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">index</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#installing packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(colorspace)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly) <span class="co"># JS plots!</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT) <span class="co"># JS tables!</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet) <span class="co"># JS maps!</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(leaflet.extras) <span class="co"># leaflet add-ons!</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">#create object</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>landslides <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"landslide.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>landslide_clean <span class="ot">&lt;-</span> landslides[<span class="sc">-</span><span class="dv">140</span>, ] <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>landslide_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(landslide_clean,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                         <span class="fu">aes</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>                           <span class="at">x =</span> date,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                           <span class="at">y =</span> elev_ft</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                         )) <span class="sc">+</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"honeydew"</span>, </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">shape =</span> <span class="dv">23</span>,</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha =</span> <span class="fl">0.6</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">size =</span> <span class="dv">2</span>,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">stroke =</span> <span class="dv">3</span> </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>   <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="cn">NA</span>),</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Portuguese Bend Landslide Monitoring"</span>,</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Date of Data Collection"</span>,</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Elevation(ft)"</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_jitter</span>(</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="at">height =</span> <span class="fl">0.15</span>, </span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="at">width =</span> <span class="dv">0</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="at">shape =</span> <span class="dv">23</span>,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="at">alpha =</span> <span class="fl">0.6</span>,</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="at">size =</span> <span class="dv">2</span>, </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="at">stroke =</span> <span class="dv">3</span>) <span class="sc">+</span> </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_continuous_sequential</span>(<span class="at">palette =</span> <span class="st">"SunsetDark"</span>) </span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplotly</span>(landslide_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2f0716cee3004abad9e7" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-2f0716cee3004abad9e7">{"x":{"data":[{"x":[15,37,15,13,19,25,13,13,13,13,13,37,15,21,36,17,1,22,22,22,36,36,36,36,36,36,36,36,9,9,35,35,35,35,35,23,6,26,24,24,24,28,34,39,39,10,14,36,36,13,38,38,38,35,4,24,28,28,34,39,39,7,29,29,29,29,29,36,36,36,26,39,13,19,19,13,13,37,36,36,36,36,35,12,32,32,4,4,4,4,24,24,24,24,24,24,24,31,34,34,34,34,39,13,20,19,15,13,13,19,20,19,19,15,19,19,20,16,16,2,30,36,36,11,5,35,27,23,23,23,8,7,4,4,4,4,39,3,33,18,18,18,18],"y":[178.62,116.48,139.59999999999999,67.569999999999993,80.900000000000006,165.28,159.91999999999999,283.43000000000001,365.02999999999997,397.27999999999997,376.62,442.80000000000001,457.19,396.43000000000001,394.94,335.92000000000002,181.97999999999999,305.42000000000002,368.61000000000001,353.13,407.31,405.38,571.64999999999998,564.92999999999995,405.67000000000002,434.37,179.44999999999999,140.47,143.00999999999999,180.84,532.25,458.52999999999997,374.27999999999997,405.32999999999998,393.44999999999999,254.15000000000001,571.52999999999997,306.69999999999999,271.89999999999998,349.01999999999998,386.27999999999997,895.32000000000005,569.74000000000001,1169.77,1165.5599999999999,396.31,3.8100000000000001,3.8300000000000001,13.81,633.27999999999997,872.65999999999997,976.25,779.63,780.72000000000003,527.54999999999995,1152.8499999999999,1157.27,782.58000000000004,618.94000000000005,917,878.09000000000003,921.86000000000001,1175.3399999999999,701.92999999999995,529.75999999999999,543.30999999999995,607.45000000000005,489.06,589.00999999999999,658.44000000000005,590.83000000000004,482.35000000000002,312.88,13.84,238.84,227.86000000000001,300.35000000000002,313.50999999999999,191.19999999999999,259.94,287.10000000000002,326.89999999999998,215.25,291.17000000000002,306.32999999999998,307.30000000000001,383.61000000000001,334.35000000000002,269.31,14.19,19.800000000000001,24.739999999999998,21.280000000000001,19.940000000000001,17.899999999999999,100.25,207.5,311.89999999999998,325.37,313.30000000000001,255.00999999999999,280.31999999999999,12.81,170.52000000000001,183.06,200.21000000000001,193.68000000000001,192.52000000000001,193.28999999999999,210.53999999999999,367.57999999999998,243.53999999999999,280.01999999999998,328.99000000000001,285.33999999999997,284.42000000000002,185.93000000000001,297.75,358.62,246.33000000000001,163.38999999999999,287.25,126.06,72.760000000000005,287.75,288.32999999999998,76.010000000000005,173.11000000000001,164.68000000000001,156.24000000000001,287.31,284.85000000000002,195.88999999999999,295.39999999999998,102.28,271.89999999999998,291.79000000000002,99.040000000000006,67.150000000000006,292.67000000000002,480.63,479.99000000000001,474.25999999999999],"text":["date: 12/1/94<br />elev_ft:  178.62","date: 9/24/94<br />elev_ft:  116.48","date: 12/1/94<br />elev_ft:  139.60","date: 11/30/94<br />elev_ft:   67.57","date: 3/14/95<br />elev_ft:   80.90","date: 4/27/95<br />elev_ft:  165.28","date: 11/30/94<br />elev_ft:  159.92","date: 11/30/94<br />elev_ft:  283.43","date: 11/30/94<br />elev_ft:  365.03","date: 11/30/94<br />elev_ft:  397.28","date: 11/30/94<br />elev_ft:  376.62","date: 9/24/94<br />elev_ft:  442.80","date: 12/1/94<br />elev_ft:  457.19","date: 3/16/95<br />elev_ft:  396.43","date: 9/24/07<br />elev_ft:  394.94","date: 3/12/97<br />elev_ft:  335.92","date: 1/16/98<br />elev_ft:  181.98","date: 3/22/02<br />elev_ft:  305.42","date: 3/22/02<br />elev_ft:  368.61","date: 3/22/02<br />elev_ft:  353.13","date: 9/24/07<br />elev_ft:  407.31","date: 9/24/07<br />elev_ft:  405.38","date: 9/24/07<br />elev_ft:  571.65","date: 9/24/07<br />elev_ft:  564.93","date: 9/24/07<br />elev_ft:  405.67","date: 9/24/07<br />elev_ft:  434.37","date: 9/24/07<br />elev_ft:  179.45","date: 9/24/07<br />elev_ft:  140.47","date: 11/13/11<br />elev_ft:  143.01","date: 11/13/11<br />elev_ft:  180.84","date: 9/14/12<br />elev_ft:  532.25","date: 9/14/12<br />elev_ft:  458.53","date: 9/14/12<br />elev_ft:  374.28","date: 9/14/12<br />elev_ft:  405.33","date: 9/14/12<br />elev_ft:  393.45","date: 4/16/15<br />elev_ft:  254.15","date: 10/5/16<br />elev_ft:  571.53","date: 4/29/20<br />elev_ft:  306.70","date: 4/17/24<br />elev_ft:  271.90","date: 4/17/24<br />elev_ft:  349.02","date: 4/17/24<br />elev_ft:  386.28","date: 5/28/24<br />elev_ft:  895.32","date: 8/1/24<br />elev_ft:  569.74","date: 9/4/24<br />elev_ft: 1169.77","date: 9/4/24<br />elev_ft: 1165.56","date: 11/13/24<br />elev_ft:  396.31","date: 11/4/98<br />elev_ft:    3.81","date: 9/24/07<br />elev_ft:    3.83","date: 9/24/07<br />elev_ft:   13.81","date: 11/30/94<br />elev_ft:  633.28","date: 9/24/98<br />elev_ft:  872.66","date: 9/24/98<br />elev_ft:  976.25","date: 9/24/98<br />elev_ft:  779.63","date: 9/14/12<br />elev_ft:  780.72","date: 10/10/23<br />elev_ft:  527.55","date: 4/17/24<br />elev_ft: 1152.85","date: 5/28/24<br />elev_ft: 1157.27","date: 5/28/24<br />elev_ft:  782.58","date: 8/1/24<br />elev_ft:  618.94","date: 9/4/24<br />elev_ft:  917.00","date: 9/4/24<br />elev_ft:  878.09","date: 10/8/24<br />elev_ft:  921.86","date: 6/14/22<br />elev_ft: 1175.34","date: 6/14/22<br />elev_ft:  701.93","date: 6/14/22<br />elev_ft:  529.76","date: 6/14/22<br />elev_ft:  543.31","date: 6/14/22<br />elev_ft:  607.45","date: 9/24/07<br />elev_ft:  489.06","date: 9/24/07<br />elev_ft:  589.01","date: 9/24/07<br />elev_ft:  658.44","date: 4/29/20<br />elev_ft:  590.83","date: 9/4/24<br />elev_ft:  482.35","date: 11/30/94<br />elev_ft:  312.88","date: 3/14/95<br />elev_ft:   13.84","date: 3/14/95<br />elev_ft:  238.84","date: 11/30/94<br />elev_ft:  227.86","date: 11/30/94<br />elev_ft:  300.35","date: 9/24/94<br />elev_ft:  313.51","date: 9/24/07<br />elev_ft:  191.20","date: 9/24/07<br />elev_ft:  259.94","date: 9/24/07<br />elev_ft:  287.10","date: 9/24/07<br />elev_ft:  326.90","date: 9/14/12<br />elev_ft:  215.25","date: 11/26/19<br />elev_ft:  291.17","date: 7/19/23<br />elev_ft:  306.33","date: 7/19/23<br />elev_ft:  307.30","date: 10/10/23<br />elev_ft:  383.61","date: 10/10/23<br />elev_ft:  334.35","date: 10/10/23<br />elev_ft:  269.31","date: 10/10/23<br />elev_ft:   14.19","date: 4/17/24<br />elev_ft:   19.80","date: 4/17/24<br />elev_ft:   24.74","date: 4/17/24<br />elev_ft:   21.28","date: 4/17/24<br />elev_ft:   19.94","date: 4/17/24<br />elev_ft:   17.90","date: 4/17/24<br />elev_ft:  100.25","date: 4/17/24<br />elev_ft:  207.50","date: 7/1/24<br />elev_ft:  311.90","date: 8/1/24<br />elev_ft:  325.37","date: 8/1/24<br />elev_ft:  313.30","date: 8/1/24<br />elev_ft:  255.01","date: 8/1/24<br />elev_ft:  280.32","date: 9/4/24<br />elev_ft:   12.81","date: 11/30/94<br />elev_ft:  170.52","date: 3/15/95<br />elev_ft:  183.06","date: 3/14/95<br />elev_ft:  200.21","date: 12/1/94<br />elev_ft:  193.68","date: 11/30/94<br />elev_ft:  192.52","date: 11/30/94<br />elev_ft:  193.29","date: 3/14/95<br />elev_ft:  210.54","date: 3/15/95<br />elev_ft:  367.58","date: 3/14/95<br />elev_ft:  243.54","date: 3/14/95<br />elev_ft:  280.02","date: 12/1/94<br />elev_ft:  328.99","date: 3/14/95<br />elev_ft:  285.34","date: 3/14/95<br />elev_ft:  284.42","date: 3/15/95<br />elev_ft:  185.93","date: 12/4/97<br />elev_ft:  297.75","date: 12/4/97<br />elev_ft:  358.62","date: 1/21/98<br />elev_ft:  246.33","date: 6/26/01<br />elev_ft:  163.39","date: 9/24/07<br />elev_ft:  287.25","date: 9/24/07<br />elev_ft:  126.06","date: 11/18/09<br />elev_ft:   72.76","date: 10/25/10<br />elev_ft:  287.75","date: 9/14/12<br />elev_ft:  288.33","date: 4/7/14<br />elev_ft:   76.01","date: 4/16/15<br />elev_ft:  173.11","date: 4/16/15<br />elev_ft:  164.68","date: 4/16/15<br />elev_ft:  156.24","date: 11/1/19<br />elev_ft:  287.31","date: 10/8/24<br />elev_ft:  284.85","date: 10/10/23<br />elev_ft:  195.89","date: 10/10/23<br />elev_ft:  295.40","date: 10/10/23<br />elev_ft:  102.28","date: 10/10/23<br />elev_ft:  271.90","date: 9/4/24<br />elev_ft:  291.79","date: 1/7/25<br />elev_ft:   99.04","date: 7/23/97<br />elev_ft:   67.15","date: 3/14/25<br />elev_ft:  292.67","date: 3/14/25<br />elev_ft:  480.63","date: 3/14/25<br />elev_ft:  479.99","date: 3/14/25<br />elev_ft:  474.26"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(240,255,240,1)","opacity":0.59999999999999998,"size":7.559055118110237,"symbol":"diamond","line":{"width":11.338582677165356,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[15,37,15,13,19,25,13,13,13,13,13,37,15,21,36,17,1,22,22,22,36,36,36,36,36,36,36,36,9,9,35,35,35,35,35,23,6,26,24,24,24,28,34,39,39,10,14,36,36,13,38,38,38,35,4,24,28,28,34,39,39,7,29,29,29,29,29,36,36,36,26,39,13,19,19,13,13,37,36,36,36,36,35,12,32,32,4,4,4,4,24,24,24,24,24,24,24,31,34,34,34,34,39,13,20,19,15,13,13,19,20,19,19,15,19,19,20,16,16,2,30,36,36,11,5,35,27,23,23,23,8,7,4,4,4,4,39,3,33,18,18,18,18],"y":[178.75074691907969,116.57579458297231,139.723245994444,67.622665367629367,80.799296446330857,165.34321578565985,159.78447720667347,283.40355453865601,365.02833822664803,397.34715709664857,376.57761967410801,442.72438748194838,457.30998798269781,396.57080779526848,394.98622219328303,335.81440886345695,182.10356503992341,305.50749796636404,368.48227289769801,353.02798718614036,407.24360674506983,405.25024543776641,571.72291072017981,564.96579332402439,405.8190017596865,434.23631524341647,179.36676324387079,140.40081622517201,142.86081756419966,180.73540512494279,532.14446654373319,458.5823873204132,374.22514728134962,405.20583321353882,393.40773547680584,254.17047139033676,571.41294015715357,306.65487104961647,271.86298080168194,348.97747756215279,386.13507420001082,895.4234224867356,569.7131021426851,1169.634938969072,1165.651120671085,396.42353308395485,3.8695455741975455,3.9252004743739963,13.890734498472884,633.30859872917176,872.53338611781589,976.23094363277778,779.72586057683918,780.85837388183461,527.68157425671814,1152.737139185122,1157.3992636259925,782.68544560428245,618.84360578901601,917.09191072147803,878.04453916424893,921.7571590990899,1175.4213078745036,701.97373422851786,529.62224745698268,543.42201784240547,607.37909963892309,489.16751065481452,588.9015430404711,658.48695526370784,590.96139060104736,482.22246556328611,312.98150016122497,13.887839433373884,238.69648689742667,227.87440871199595,300.4375166312559,313.59865551110357,191.101622912148,260.06545637467411,286.99931369335394,326.80160099207421,215.26345793351067,291.05401589388958,306.23004269010386,307.22772700693457,383.47174190912864,334.46896435366943,269.24317501062995,14.234078339170663,19.680924012092873,24.823237664029001,21.368300561951475,19.977692832527683,17.987422669422813,100.31400067063514,207.56439758231863,311.75918768786357,325.41749522828496,313.39855217861481,255.08729682454373,280.33398215729278,12.82718367151916,170.50664029987996,183.0636779112881,200.30284008943943,193.73960594010541,192.52919233290478,193.3822950795153,210.6743200389063,367.48874378641602,243.63413152991328,279.9330957698682,328.95624073623679,285.44645555697844,284.55539826681371,185.95626644226257,297.756200751476,358.54183249457742,246.39110709209461,163.31664578068069,287.3321280041244,125.99024748908356,72.748547789631417,287.84827721167824,288.31060027572789,75.910784916710114,173.06531111944003,164.63947774890812,156.25186375105756,287.32952623981049,284.88415256990123,195.90035924784371,295.34728295521342,102.26924387847073,271.83435753840018,291.75040936699139,99.082626894731078,67.086925197183163,292.70820338752122,480.77709564184306,480.02089441545309,474.364126653634],"text":["date: 12/1/94<br />elev_ft:  178.62","date: 9/24/94<br />elev_ft:  116.48","date: 12/1/94<br />elev_ft:  139.60","date: 11/30/94<br />elev_ft:   67.57","date: 3/14/95<br />elev_ft:   80.90","date: 4/27/95<br />elev_ft:  165.28","date: 11/30/94<br />elev_ft:  159.92","date: 11/30/94<br />elev_ft:  283.43","date: 11/30/94<br />elev_ft:  365.03","date: 11/30/94<br />elev_ft:  397.28","date: 11/30/94<br />elev_ft:  376.62","date: 9/24/94<br />elev_ft:  442.80","date: 12/1/94<br />elev_ft:  457.19","date: 3/16/95<br />elev_ft:  396.43","date: 9/24/07<br />elev_ft:  394.94","date: 3/12/97<br />elev_ft:  335.92","date: 1/16/98<br />elev_ft:  181.98","date: 3/22/02<br />elev_ft:  305.42","date: 3/22/02<br />elev_ft:  368.61","date: 3/22/02<br />elev_ft:  353.13","date: 9/24/07<br />elev_ft:  407.31","date: 9/24/07<br />elev_ft:  405.38","date: 9/24/07<br />elev_ft:  571.65","date: 9/24/07<br />elev_ft:  564.93","date: 9/24/07<br />elev_ft:  405.67","date: 9/24/07<br />elev_ft:  434.37","date: 9/24/07<br />elev_ft:  179.45","date: 9/24/07<br />elev_ft:  140.47","date: 11/13/11<br />elev_ft:  143.01","date: 11/13/11<br />elev_ft:  180.84","date: 9/14/12<br />elev_ft:  532.25","date: 9/14/12<br />elev_ft:  458.53","date: 9/14/12<br />elev_ft:  374.28","date: 9/14/12<br />elev_ft:  405.33","date: 9/14/12<br />elev_ft:  393.45","date: 4/16/15<br />elev_ft:  254.15","date: 10/5/16<br />elev_ft:  571.53","date: 4/29/20<br />elev_ft:  306.70","date: 4/17/24<br />elev_ft:  271.90","date: 4/17/24<br />elev_ft:  349.02","date: 4/17/24<br />elev_ft:  386.28","date: 5/28/24<br />elev_ft:  895.32","date: 8/1/24<br />elev_ft:  569.74","date: 9/4/24<br />elev_ft: 1169.77","date: 9/4/24<br />elev_ft: 1165.56","date: 11/13/24<br />elev_ft:  396.31","date: 11/4/98<br />elev_ft:    3.81","date: 9/24/07<br />elev_ft:    3.83","date: 9/24/07<br />elev_ft:   13.81","date: 11/30/94<br />elev_ft:  633.28","date: 9/24/98<br />elev_ft:  872.66","date: 9/24/98<br />elev_ft:  976.25","date: 9/24/98<br />elev_ft:  779.63","date: 9/14/12<br />elev_ft:  780.72","date: 10/10/23<br />elev_ft:  527.55","date: 4/17/24<br />elev_ft: 1152.85","date: 5/28/24<br />elev_ft: 1157.27","date: 5/28/24<br />elev_ft:  782.58","date: 8/1/24<br />elev_ft:  618.94","date: 9/4/24<br />elev_ft:  917.00","date: 9/4/24<br />elev_ft:  878.09","date: 10/8/24<br />elev_ft:  921.86","date: 6/14/22<br />elev_ft: 1175.34","date: 6/14/22<br />elev_ft:  701.93","date: 6/14/22<br />elev_ft:  529.76","date: 6/14/22<br />elev_ft:  543.31","date: 6/14/22<br />elev_ft:  607.45","date: 9/24/07<br />elev_ft:  489.06","date: 9/24/07<br />elev_ft:  589.01","date: 9/24/07<br />elev_ft:  658.44","date: 4/29/20<br />elev_ft:  590.83","date: 9/4/24<br />elev_ft:  482.35","date: 11/30/94<br />elev_ft:  312.88","date: 3/14/95<br />elev_ft:   13.84","date: 3/14/95<br />elev_ft:  238.84","date: 11/30/94<br />elev_ft:  227.86","date: 11/30/94<br />elev_ft:  300.35","date: 9/24/94<br />elev_ft:  313.51","date: 9/24/07<br />elev_ft:  191.20","date: 9/24/07<br />elev_ft:  259.94","date: 9/24/07<br />elev_ft:  287.10","date: 9/24/07<br />elev_ft:  326.90","date: 9/14/12<br />elev_ft:  215.25","date: 11/26/19<br />elev_ft:  291.17","date: 7/19/23<br />elev_ft:  306.33","date: 7/19/23<br />elev_ft:  307.30","date: 10/10/23<br />elev_ft:  383.61","date: 10/10/23<br />elev_ft:  334.35","date: 10/10/23<br />elev_ft:  269.31","date: 10/10/23<br />elev_ft:   14.19","date: 4/17/24<br />elev_ft:   19.80","date: 4/17/24<br />elev_ft:   24.74","date: 4/17/24<br />elev_ft:   21.28","date: 4/17/24<br />elev_ft:   19.94","date: 4/17/24<br />elev_ft:   17.90","date: 4/17/24<br />elev_ft:  100.25","date: 4/17/24<br />elev_ft:  207.50","date: 7/1/24<br />elev_ft:  311.90","date: 8/1/24<br />elev_ft:  325.37","date: 8/1/24<br />elev_ft:  313.30","date: 8/1/24<br />elev_ft:  255.01","date: 8/1/24<br />elev_ft:  280.32","date: 9/4/24<br />elev_ft:   12.81","date: 11/30/94<br />elev_ft:  170.52","date: 3/15/95<br />elev_ft:  183.06","date: 3/14/95<br />elev_ft:  200.21","date: 12/1/94<br />elev_ft:  193.68","date: 11/30/94<br />elev_ft:  192.52","date: 11/30/94<br />elev_ft:  193.29","date: 3/14/95<br />elev_ft:  210.54","date: 3/15/95<br />elev_ft:  367.58","date: 3/14/95<br />elev_ft:  243.54","date: 3/14/95<br />elev_ft:  280.02","date: 12/1/94<br />elev_ft:  328.99","date: 3/14/95<br />elev_ft:  285.34","date: 3/14/95<br />elev_ft:  284.42","date: 3/15/95<br />elev_ft:  185.93","date: 12/4/97<br />elev_ft:  297.75","date: 12/4/97<br />elev_ft:  358.62","date: 1/21/98<br />elev_ft:  246.33","date: 6/26/01<br />elev_ft:  163.39","date: 9/24/07<br />elev_ft:  287.25","date: 9/24/07<br />elev_ft:  126.06","date: 11/18/09<br />elev_ft:   72.76","date: 10/25/10<br />elev_ft:  287.75","date: 9/14/12<br />elev_ft:  288.33","date: 4/7/14<br />elev_ft:   76.01","date: 4/16/15<br />elev_ft:  173.11","date: 4/16/15<br />elev_ft:  164.68","date: 4/16/15<br />elev_ft:  156.24","date: 11/1/19<br />elev_ft:  287.31","date: 10/8/24<br />elev_ft:  284.85","date: 10/10/23<br />elev_ft:  195.89","date: 10/10/23<br />elev_ft:  295.40","date: 10/10/23<br />elev_ft:  102.28","date: 10/10/23<br />elev_ft:  271.90","date: 9/4/24<br />elev_ft:  291.79","date: 1/7/25<br />elev_ft:   99.04","date: 7/23/97<br />elev_ft:   67.15","date: 3/14/25<br />elev_ft:  292.67","date: 3/14/25<br />elev_ft:  480.63","date: 3/14/25<br />elev_ft:  479.99","date: 3/14/25<br />elev_ft:  474.26"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"transparent","opacity":0.59999999999999998,"size":7.559055118110237,"symbol":"diamond","line":{"width":11.338582677165356,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.762557077625573,"r":7.3059360730593621,"b":53.812112334378554,"l":48.949771689497723},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Portuguese Bend Landslide Monitoring","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,39.600000000000001],"tickmode":"array","ticktext":["1/16/98","1/21/98","1/7/25","10/10/23","10/25/10","10/5/16","10/8/24","11/1/19","11/13/11","11/13/24","11/18/09","11/26/19","11/30/94","11/4/98","12/1/94","12/4/97","3/12/97","3/14/25","3/14/95","3/15/95","3/16/95","3/22/02","4/16/15","4/17/24","4/27/95","4/29/20","4/7/14","5/28/24","6/14/22","6/26/01","7/1/24","7/19/23","7/23/97","8/1/24","9/14/12","9/24/07","9/24/94","9/24/98","9/4/24"],"tickvals":[1,2,3.0000000000000004,4,5,6.0000000000000009,6.9999999999999991,7.9999999999999991,9,10,11,12.000000000000002,13,13.999999999999998,15,16,17,18,19,20,21,21.999999999999996,23,24,25,26,27,28,29,30,31.000000000000004,32,33,34,35,36,37,38,39],"categoryorder":"array","categoryarray":["1/16/98","1/21/98","1/7/25","10/10/23","10/25/10","10/5/16","10/8/24","11/1/19","11/13/11","11/13/24","11/18/09","11/26/19","11/30/94","11/4/98","12/1/94","12/4/97","3/12/97","3/14/25","3/14/95","3/15/95","3/16/95","3/22/02","4/16/15","4/17/24","4/27/95","4/29/20","4/7/14","5/28/24","6/14/22","6/26/01","7/1/24","7/19/23","7/23/97","8/1/24","9/14/12","9/24/07","9/24/94","9/24/98","9/4/24"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-45,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Date of Data Collection","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-54.770565393725178,1234.0018732682288],"tickmode":"array","ticktext":["0","300","600","900","1200"],"tickvals":[0,300,600,900,1200],"categoryorder":"array","categoryarray":["0","300","600","900","1200"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Elevation(ft)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(0,0,0,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"d21315f0903d":{"x":{},"y":{},"type":"scatter"},"d213648da00b":{"x":{},"y":{}}},"cur_data":"d21315f0903d","visdat":{"d21315f0903d":["function (y) ","x"],"d213648da00b":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
